@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./res/icon.png">
+    <title>Tasks</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Tarefas</h1>
+        <div class="task">
+            <div class="task-box">
+                <p class="task-description">
+                    Estudar para prova de Inglês.
+                </p>
+                <p class="task-time">12:30</p>
+            </div>
+            <div class="task-check" onclick="if(ch){document.querySelector('.check-icon').style.display='block';ch = false}else{document.querySelector('.check-icon').style.display='none';ch=true}">
+                <h1 class="check-icon">✓</h1>
+            </div>
+        </div>
+    </div>
+    <div class="add-task-btn" onclick="AddCont(true)">
+        <img src="./res/note.png" class="add-img">
+    </div>
+    <div class="back" onclick="AddCont()"></div>
+    <div class="add-box">
+        <h1 class="add-title">Criar nova tarefa</h1>
+        <input type="text" id="description" placeholder="Descrição (Máximo 45 caracteres)" spellcheck="false" maxlength="45" class="add-get">
+        <input type="time" id="time" class="add-get add-gett">
+        <button class="add-create" onclick="create()">Criar tarefa</button>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
